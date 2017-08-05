@@ -1,0 +1,147 @@
+    /* Bootstrap SASS*/
+
+    // Core variables and mixins
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins"; // Reset and dependencies
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize"; // Core CSS
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons"; // Components
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/media";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip"; // Components w/ JavaScript
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals"; // Utility classes
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+    @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+    @import "mixin";
+    @import "font-awesome";
+    @import "./components/products/products";
+    @import "./components/products/billing";
+    @import "./components/products/modal";
+
+    img {
+        max-width: 100%;
+    }
+
+    body,
+    html {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    sup {
+        top: -.3em;
+    }
+
+    .lbl-block {
+        display: block;
+    }
+
+    .lbl-inlineBlock {
+        display: inline-block;
+    }
+
+    .lbl-small {
+        font-size: 13px;
+    }
+
+    .lbl-medium {
+        font-size: 14px;
+    }
+
+    .lbl-large {
+        font-size: 16px;
+    }
+
+    .lbl-light {
+        color: #888;
+    }
+
+    .lbl-dark {
+        color: #333;
+    }
+
+    .modal-open .modal {
+        padding: 0 !important;
+    }
+
+    .modal {
+        text-align: center;
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    input[type=radio] {
+        position: absolute;
+        display: inline;
+        left: -99999em;
+        z-index: 0;
+        top: 0;
+    }
+
+    .radiobutton {
+        position: relative;
+        margin: 0 5px;
+        cursor:pointer;
+    }
+
+    .radioBtn {
+        z-index: 1;
+        position: relative;
+         background-color: inherit;
+        &:before {
+            display: block;
+            content: '';
+            height: 20px;
+            width: 20px;
+            border: 1px solid transparent;
+            position: relative;
+            background-color: inherit;
+        }
+    }
+
+    input[type=radio]:checked~.radioBtn::before,input[type=radio]:focus+.radioBtn {
+        border-color: #ddd;
+         height: 22px;
+            width: 22px;
+    }
+
+   
+
+
+    @media screen and (max-width: 1023) {}
+
+    @media screen and (max-width:767px) {}
+
+    @media screen and (max-width:639px) {}

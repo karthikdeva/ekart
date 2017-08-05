@@ -1,0 +1,158 @@
+.billing-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .bill-header,
+    .bill-content,
+    .bill-footer {
+        @include full-width;
+    }
+    .billing-sidebar {
+        h5 {
+            margin: 0 0 20px;
+        }
+        a {
+            color: #888;
+            text-decoration: underline;
+        }
+        span,
+        label {
+            display: block;
+        }
+        .lbl-light {
+            font-weight: 300;
+        }
+
+        label {
+            margin: 0 0 15px;
+        }
+    }
+    .bill-content {
+        padding: 25px 0;
+        margin: 20px 0;
+        border-top: 5px solid #ddd;
+        border-bottom: 5px solid #ddd;
+        span {
+            max-width: 240px;
+        }
+        label {
+            text-transform: uppercase;
+        }
+    }
+
+    .bill-header {
+        label {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 300;
+            max-width: 220px;
+            float: left;
+        }
+        input {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+        }
+        .coupon-wrapper {
+            float: right;
+        }
+        .button {
+            background: transparent;
+            border: 1px solid #666;
+            padding: 8px 25px;
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+        }
+    }
+
+    .bill-footer {
+        a {
+            color: #666;
+            display: inline-block;
+            padding-top: 11px;
+            text-decoration: underline;
+        }
+        a,
+        .btn {
+            text-transform: uppercase;
+        }
+        .btn {
+            float: right;
+            margin-left: 25px;
+            background: #1069bd;
+            padding: 10px 15px;
+            @include border-radius(0px);
+        }
+        .secure {
+            @include full-width;
+            margin-top: 20px;
+        }
+        .secure_desc {
+            float: right;
+            background: url("../images/lock.jpg") no-repeat;
+            padding-left: 25px;
+            line-height: 24px;
+            color: #888;
+            font-size: 13px;
+            font-weight: 300;
+        }
+    }
+    .content-row {
+        padding: 15px 0;
+        &.total {
+            border-top: 1px solid #ddd;
+        }
+    }
+    /* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+}
+
+@media screen and (max-width:767px) {
+    .billing-container {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        .bill-header {
+            text-align: center;
+            label,
+            .coupon-wrapper {
+                float: none;
+            }
+        }
+        .coupon-wrapper {
+            padding-top: 15px;
+        }
+        .bill-content {
+            margin-bottom: 10px;
+        }
+        .bill-footer {
+            text-align: center;
+            .pull-right {
+                width: 100%;
+            }
+            .btn {
+                float: none;
+                margin:15px 0;
+            }
+            a {
+                display: block;
+            }
+            .secure_desc {
+                float: none;
+                max-width: 50%;
+                background-position: center bottom;
+                padding: 0 0 25px;
+            }
+        }
+    }
+}

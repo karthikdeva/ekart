@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ekart</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/assets/css/client.style.min.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <section class="container products-section">
+        <h1 class="title">Your Shopping Bag</h1>
+        <header id="product-header" class="product-header row hidden-xs">
+            <div class="col-md-8 col-sm-8">
+                <label id="noOfProducts"> </label>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <label class="lbl-title col-md-4 col-sm-4">Size</label>
+                <label class="lbl-title col-md-4 col-sm-4">QTY</label>
+                <label class="lbl-title col-md-4 col-sm-4">Price</label>
+            </div>
+        </header>
+        <!-- /header -->
+        <!-- Cart section-->
+        <div class="products-wrapper row" id="products">
+        </div>
+        <!-- Billing section-->
+        <div class="billing-container row">
+            <div class="col-md-4 col-sm-4 hidden-xs billing-sidebar">
+                <h5 class="lbl-dark">Need help <br/>or have questions?</h5>
+                <label class="lbl-light">
+                    Call customer service at
+                    <span>1-800-555-5555</span>
+                </label>
+                <label class="lbl-light">
+                    <a href="javascript:;">Chat with one of<br/> our stylists</a>
+                </label>
+                <label class="lbl-light">
+                    <a href="javascript:;">See return<br/> & exchange policy</a>
+                </label>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <section class="bill-wrapper">
+                    <header id="bill-header" class="bill-header">
+                        <label class="lbl-light">Enter promotion code or gift card</label>
+                        <div class="coupon-wrapper">
+                            <input type="text" name="couponCode" id="couponCode">
+                            <button class="button" id="apply">Apply</button>
+                        </div>
+                    </header>
+                    <!-- /header -->
+                    <div class="bill-content">
+                        <div class="content-row">
+                            <label class="lbl-medium lbl-dark">Subtotal</label>
+                            <span class="lbl-right pull-right" id="subTotal"></span>
+                        </div>
+                        <div class="content-row">
+                            <label class="lbl-medium lbl-dark">Promotion code <span id="offerCode"></span> Applied</label>
+                            <span class="lbl-right pull-right" id="discountPrice"></span>
+                        </div>
+                        <div class="content-row">
+                            <label class="lbl-medium lbl-dark">Estimated Shipping*</label>
+                            <span class="lbl-right pull-right lbl-dark">FREE</span>
+                            <span class="lbl-block lbl-small lbl-light">You Qualify for free shipping because of your order is over <i id="minPrice">$50*</i></span>
+                        </div>
+                        <div class="content-row total" id="total">
+                            <label class="lbl-medium lbl-dark lbl-large">Estimated Total*</label>
+                            <span class="lbl-right pull-right" id="estimatedPrice"></span>
+                            <span class="lbl-block lbl-small lbl-light">Tax will be applied during checkout</span>
+                        </div>
+                    </div>
+                    <footer id="bill-footer" class="bill-footer">
+                        <div class="pull-right">
+                            <button class="btn btn-primary">Checkout</button>
+                            <a href="javascript:;">Continue shopping</a>
+                        </div>
+                        <div class="secure">
+                            <label class="secure_desc">Secure checkout. Shopping is always safe & secure</label>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <!-- Modal box -->
+        <div id="cartModal" class="modal fade cartModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                 <div class="modal-header">
+                    <button class="close pull-right lbl-light" data-dismiss="modal">X</button>
+                    </div>
+                    <div class="modal-body" id="modalContent">
+                      
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- inject:js -->
+    <script src="/assets/js/client.vendor.js"></script>
+    <script src="/assets/js/client.scripts.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

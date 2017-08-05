@@ -1,0 +1,97 @@
+.cartModal {
+    .inner-wrapper {
+        text-align: center;
+        border-top: 5px solid #ddd;
+        padding-top: 30px;
+    }
+    h3 {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #999;
+        margin: 0;
+    }
+    h5 {
+        sup {
+            color: #999;
+        }
+        font-size:30px;
+        margin-bottom: 30px;
+    }
+    .modal-body,
+    .modal-content,
+    .modal-item {
+        @include full-width;
+    }
+    .modal-header,
+    .modal-content {
+        border: none;
+    }
+    .close {
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .modal-body {
+        padding: 30px 15px 50px;
+    }
+    .modal-content {
+        @include border-radius(0px);
+    }
+    .product-image {
+        text-align: center;
+    }
+    .form-control {
+
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+    select {
+        text-transform: capitalize;
+        @include border-radius(0px);
+    }
+    .link {
+        text-decoration: underline;
+        color: #888;
+        font-size: 14px;
+        display: block;
+    }
+    .btn {
+        margin: 15px 0;
+        background: #1069bd;
+        border-radius: 0;
+        padding: 10px 15px;
+        min-width: 130px;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin: 0 5px;
+        input[type='checkbox'] {
+            position: absolute;
+            left: -999em;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 750px;
+        .product-image {
+            float: right;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-dialog {
+        .product-image {
+            margin-bottom: 30px;
+        }
+    }
+}
+
